@@ -1,3 +1,7 @@
+// Copyright 2018 The Flutter team. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,109 +11,319 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: Color.fromARGB(255, 72, 72, 72)),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+      debugShowCheckedModeBanner: false,
+      title: 'Profil',
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: BackButton(
+            onPressed: () {},
+          ),
+          title: const Text(
+            'Profil',
+            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+          ),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.edit),
+              onPressed: () {},
             ),
           ],
         ),
+        body: Center(
+          child: Column(
+            //PROFIL
+            children: [
+              const SizedBox(height: 25),
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/cover1.jpg'),
+                radius: 70,
+              ),
+              Column(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const SizedBox(height: 27),
+                  const Text(
+                    'Fahrul Rizky',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                  const Text(
+                    'fahrul.065119009@unpak.ac.id',
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                  const Text(
+                    '065119009',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(10, 0, 15, 12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 116, 87, 152),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: [
+                    //INFORMASI NPM
+                    Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(color: Colors.white, width: 1),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'NPM',
+                            style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                '065119009',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.copy_outlined,
+                                  color: Colors.white,
+                                  size: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                      decoration: const BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(color: Colors.white, width: 1)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text("Status Keaktifan",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 17,
+                              )),
+                          Row(
+                            children: const [
+                              Text("Aktif",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                      decoration: const BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(color: Colors.white, width: 1)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text("Program Studi",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 17,
+                              )),
+                          Row(
+                            children: const [
+                              Text("Ilmu Komputer",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text("Jenjang Pendidikan",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 17,
+                              )),
+                          Row(
+                            children: const [
+                              Text("S1",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Color.fromARGB(255, 117, 87, 153), width: 1)),
+                ),
+                margin: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Nama Lengkap",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 72, 72, 72),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500)),
+                    Row(
+                      children: const [
+                        Text("Fahrul Rizky",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 156, 156, 156),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Color.fromARGB(255, 117, 87, 153), width: 1)),
+                ),
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Panggilan",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 72, 72, 72),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500)),
+                    Row(
+                      children: const [
+                        Text("Fahrul",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 156, 156, 156),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const Text("Alamat Rumah",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 72, 72, 72),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500))
+                  ],
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Color.fromARGB(255, 87, 65, 117), width: 1)),
+                ),
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const Expanded(
+                        child: Text(
+                      "Kp Kebon Kopi RT 02/10 Kel Puspanegara Kec Citeureup",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 61, 61, 61),
+                        fontSize: 17,
+                      ),
+                    ))
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Kartu Mahasiswa",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 72, 72, 72),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500)),
+                    Row(
+                      children: [
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.badge,
+                              color: Color.fromARGB(255, 117, 87, 153),
+                            ))
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
