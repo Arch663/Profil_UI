@@ -63,14 +63,14 @@ class MyApp extends StatelessWidget {
                   const Text(
                     'fahrul.065119009@unpak.ac.id',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                   const Text(
                     '065119009',
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 14,
                       color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
                           const Text(
                             'NPM',
                             style: TextStyle(
-                              fontSize: 17,
+                              fontSize: 16,
                               color: Colors.white,
                             ),
                           ),
@@ -107,7 +107,7 @@ class MyApp extends StatelessWidget {
                               const Text(
                                 '065119009',
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -117,7 +117,7 @@ class MyApp extends StatelessWidget {
                                 icon: const Icon(
                                   Icons.copy_outlined,
                                   color: Colors.white,
-                                  size: 17,
+                                  size: 16,
                                 ),
                               ),
                             ],
@@ -137,14 +137,14 @@ class MyApp extends StatelessWidget {
                           const Text("Status Keaktifan",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 17,
+                                fontSize: 16,
                               )),
                           Row(
                             children: const [
                               Text("Aktif",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 17,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -163,14 +163,14 @@ class MyApp extends StatelessWidget {
                           const Text("Program Studi",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 17,
+                                fontSize: 16,
                               )),
                           Row(
                             children: const [
                               Text("Ilmu Komputer",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 12,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -185,14 +185,14 @@ class MyApp extends StatelessWidget {
                           const Text("Jenjang Pendidikan",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 17,
+                                fontSize: 16,
                               )),
                           Row(
                             children: const [
                               Text("S1",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 17,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -206,7 +206,7 @@ class MyApp extends StatelessWidget {
                 decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                          color: Color.fromARGB(255, 117, 87, 153), width: 1)),
+                          color: Color.fromARGB(255, 116, 87, 153), width: 1)),
                 ),
                 margin: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -216,14 +216,14 @@ class MyApp extends StatelessWidget {
                     const Text("Nama Lengkap",
                         style: TextStyle(
                             color: Color.fromARGB(255, 72, 72, 72),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500)),
                     Row(
                       children: const [
                         Text("Fahrul Rizky",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 156, 156, 156),
-                                fontSize: 17,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w600)),
                       ],
                     ),
@@ -234,7 +234,7 @@ class MyApp extends StatelessWidget {
                 decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                          color: Color.fromARGB(255, 117, 87, 153), width: 1)),
+                          color: Color.fromARGB(255, 116, 87, 153), width: 1)),
                 ),
                 margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
@@ -244,14 +244,14 @@ class MyApp extends StatelessWidget {
                     const Text("Panggilan",
                         style: TextStyle(
                             color: Color.fromARGB(255, 72, 72, 72),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500)),
                     Row(
                       children: const [
                         Text("Fahrul",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 156, 156, 156),
-                                fontSize: 17,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w600)),
                       ],
                     ),
@@ -268,7 +268,7 @@ class MyApp extends StatelessWidget {
                     const Text("Alamat Rumah",
                         style: TextStyle(
                             color: Color.fromARGB(255, 72, 72, 72),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500))
                   ],
                 ),
@@ -277,7 +277,7 @@ class MyApp extends StatelessWidget {
                 decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                          color: Color.fromARGB(255, 87, 65, 117), width: 1)),
+                          color: Color.fromARGB(255, 87, 65, 116), width: 1)),
                 ),
                 margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -290,7 +290,7 @@ class MyApp extends StatelessWidget {
                       "Kp Kebon Kopi RT 02/10 Kel Puspanegara Kec Citeureup",
                       style: TextStyle(
                         color: Color.fromARGB(255, 61, 61, 61),
-                        fontSize: 17,
+                        fontSize: 16,
                       ),
                     ))
                   ],
@@ -305,7 +305,7 @@ class MyApp extends StatelessWidget {
                     const Text("Kartu Mahasiswa",
                         style: TextStyle(
                             color: Color.fromARGB(255, 72, 72, 72),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500)),
                     Row(
                       children: [
@@ -313,7 +313,7 @@ class MyApp extends StatelessWidget {
                             onPressed: () {},
                             icon: const Icon(
                               Icons.badge,
-                              color: Color.fromARGB(255, 117, 87, 153),
+                              color: Color.fromARGB(255, 116, 87, 153),
                             ))
                       ],
                     ),
